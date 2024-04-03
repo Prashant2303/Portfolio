@@ -1,0 +1,111 @@
+:root {
+    --space1: 4px;
+    --space2: 8px;
+    --space3: 12px;
+    --dark-color: rgb(12, 12, 12);
+    --light-color: white;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    transition: all 1s linear;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    /* top: 0px; */
+    border: 1px solid;
+    backdrop-filter: blur(10px);
+
+    #toggle-btn {
+        border: 0px;
+        background-color: inherit;
+    }
+
+    #toggle-btn:hover {
+        cursor: pointer;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+
+    a {
+        padding: var(--space3);
+        color: inherit;
+    }
+}
+
+#light-mode-btn {
+    display: none;
+}
+
+#home-section {
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* animation-name: fadeInUp; */
+    /* animation-duration: 2s; */
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate(0px, 40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+#dynamic-text {
+    margin-left: 4px;
+}
+
+@keyframes mode-change {
+    from {
+        background-color: var(--light-color),
+    }
+
+    to {
+        background-color: var(--dark-color);
+    }
+}
+
+
+.dark-mode {
+    animation: mode-change;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+
+    a {
+        color: var(--light-color);
+    }
+
+    .material-symbols-rounded {
+        color: var(--light-color);
+    }
+
+    #dark-mode-btn {
+        display: none;
+    }
+
+    #light-mode-btn {
+        display: block;
+    }
+
+    #mode {
+        background-color: var(--dark-color);
+    }
+}
