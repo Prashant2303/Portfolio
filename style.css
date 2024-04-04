@@ -6,11 +6,25 @@
     --light-color: white;
 }
 
-html,
 body {
-    height: 100%;
     font-family: 'Roboto', sans-serif;
-    transition: all 1s linear;
+    transition: all 0.5s linear;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.material-symbols-rounded {
+    transition: all 0.5s linear;
+    color: var(--light-color);
+}
+
+.light-mode {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+
+    .material-symbols-rounded {
+        color: var(--dark-color);
+    }
 }
 
 header {
@@ -18,43 +32,43 @@ header {
     justify-content: center;
     position: fixed;
     width: 100%;
-    /* top: 0px; */
-    border: 1px solid;
+    top: 0px;
+    z-index: 1;
     backdrop-filter: blur(10px);
 
     #toggle-btn {
         border: 0px;
         background-color: inherit;
+        display: flex;
+        align-items: center;
     }
 
     #toggle-btn:hover {
         cursor: pointer;
     }
-}
 
-nav {
-    display: flex;
-    justify-content: center;
+    nav {
+        display: flex;
+        justify-content: center;
 
-    a {
-        padding: var(--space3);
-        color: inherit;
+        a {
+            padding: var(--space3);
+            color: inherit;
+            text-decoration: none;
+        }
     }
 }
 
-#light-mode-btn {
-    display: none;
-}
-
 #home-section {
-    height: 200%;
+    margin-top: 60px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* animation-name: fadeInUp; */
-    /* animation-duration: 2s; */
-    /* animation-iteration-count: infinite; */
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes fadeInUp {
@@ -73,39 +87,11 @@ nav {
     margin-left: 4px;
 }
 
-@keyframes mode-change {
-    from {
-        background-color: var(--light-color),
-    }
-
-    to {
-        background-color: var(--dark-color);
-    }
+#skills-section {
+    transition: opacity .5s;
+    cursor: pointer;
 }
 
-
-.dark-mode {
-    animation: mode-change;
-    background-color: var(--dark-color);
-    color: var(--light-color);
-
-    a {
-        color: var(--light-color);
-    }
-
-    .material-symbols-rounded {
-        color: var(--light-color);
-    }
-
-    #dark-mode-btn {
-        display: none;
-    }
-
-    #light-mode-btn {
-        display: block;
-    }
-
-    #mode {
-        background-color: var(--dark-color);
-    }
+#skills-section:hover {
+    opacity: 0;
 }

@@ -12,20 +12,18 @@
         dynamicText.innerHTML = dynamicTextArray[i++];
     }, 2000)
 
-    // Dark Mode Toggle
+    // Theme Toggle
     const bodyEl = document.querySelector('body');
-    const darkMode = 'dark-mode';
-    if (localStorage.getItem(darkMode) === 'true') {
-        bodyEl.classList.add(darkMode);
+    const lightMode = 'light-mode';
+    if (localStorage.getItem(lightMode) === 'true') {
+        bodyEl.classList.add(lightMode);
     }
+
     const handleMode = () => {
-        // if(bodyEl.classList.contains(darkMode)) {
-        //     localStorage.setItem(darkMode, 'false');
-        // } else {
-        //     localStorage.setItem(darkMode, 'true' )
-        // }
-        localStorage.setItem(darkMode, !bodyEl.classList.contains(darkMode))
-        bodyEl.classList.toggle(darkMode);
+        const icon = document.querySelector('.material-symbols-rounded');
+        icon.innerHTML = bodyEl.classList.contains(lightMode) ? 'light_mode' : 'dark_mode';
+        bodyEl.classList.toggle(lightMode);
+        localStorage.setItem(lightMode, bodyEl.classList.contains(lightMode))
     }
     document.querySelector('#toggle-btn').addEventListener('click', handleMode)
 })()
