@@ -49,21 +49,20 @@ header {
                 color: inherit;
 
                 .material-symbols-rounded {
-                    transition: all 0.5s linear;
                     color: inherit;
-                }
-
-                #menu-toggle {
-                    transition: all 200ms linear;
-                }
-
-                .toggle {
-                    transform: rotate(180deg);
                 }
             }
 
             button:hover {
                 cursor: pointer;
+            }
+
+            #menu-toggle {
+                transition: all 200ms linear;
+            }
+
+            .toggle {
+                transform: rotate(180deg);
             }
         }
     }
@@ -73,6 +72,7 @@ header {
         transition: all 0.2s linear;
         transform: scaleY(0);
         transform-origin: top;
+        height: 0px;
 
         a {
             padding: var(--space3);
@@ -83,6 +83,7 @@ header {
 
     .visible {
         transform: scaleY(1);
+        height: 100%;
     }
 }
 
