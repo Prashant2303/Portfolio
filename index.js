@@ -20,12 +20,12 @@
     }
 
     const handleMode = () => {
-        const icon = document.querySelector('.material-symbols-rounded');
+        const icon = document.querySelector('#theme-icon');
         icon.innerHTML = bodyEl.classList.contains(lightMode) ? 'light_mode' : 'dark_mode';
         bodyEl.classList.toggle(lightMode);
         localStorage.setItem(lightMode, bodyEl.classList.contains(lightMode))
     }
-    document.querySelector('#toggle-btn').addEventListener('click', handleMode)
+    document.querySelector('#theme-toggle').addEventListener('click', handleMode)
 
     // Menu Toggle
     const toggleEl = document.querySelector('#menu-toggle');
