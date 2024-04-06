@@ -26,4 +26,12 @@
         localStorage.setItem(lightMode, bodyEl.classList.contains(lightMode))
     }
     document.querySelector('#toggle-btn').addEventListener('click', handleMode)
+
+    // Menu Toggle
+    const toggleEl = document.querySelector('#menu-toggle');
+    const menuEl = document.querySelector('.menu');
+    toggleEl.addEventListener('click', () => {
+        toggleEl.classList.toggle('toggle');
+        menuEl.classList.toggle('visible');
+    })
 })()

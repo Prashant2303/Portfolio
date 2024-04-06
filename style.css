@@ -8,54 +8,81 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    transition: all 0.5s linear;
+    transition: color, background-color 0.5s linear;
     background-color: var(--dark-color);
-    color: var(--light-color);
-}
-
-.material-symbols-rounded {
-    transition: all 0.5s linear;
     color: var(--light-color);
 }
 
 .light-mode {
     background-color: var(--light-color);
     color: var(--dark-color);
+}
 
-    .material-symbols-rounded {
-        color: var(--dark-color);
+@media screen and (min-width: 600px) {
+    body {
+        border: 2px solid blue;
     }
 }
 
 header {
-    display: flex;
-    justify-content: center;
     position: fixed;
     width: 100%;
     top: 0px;
     z-index: 1;
     backdrop-filter: blur(10px);
+    padding: var(--space3);
 
-    #toggle-btn {
-        border: 0px;
-        background-color: inherit;
+    .navbar {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+
+        .nav-buttons {
+            display: flex;
+            gap: var(--space3);
+
+            button {
+                border: 0px;
+                background-color: inherit;
+                display: flex;
+                align-items: center;
+                color: inherit;
+
+                .material-symbols-rounded {
+                    transition: all 0.5s linear;
+                    color: inherit;
+                }
+
+                #menu-toggle {
+                    transition: all 200ms linear;
+                }
+
+                .toggle {
+                    transform: rotate(180deg);
+                }
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+        }
     }
 
-    #toggle-btn:hover {
-        cursor: pointer;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
+    .menu {
+        text-align: center;
+        transition: all 0.2s linear;
+        transform: scaleY(0);
+        transform-origin: top;
 
         a {
             padding: var(--space3);
             color: inherit;
             text-decoration: none;
         }
+    }
+
+    .visible {
+        transform: scaleY(1);
     }
 }
 
@@ -81,17 +108,4 @@ header {
         transform: translate(0px, 0px);
         opacity: 1;
     }
-}
-
-#dynamic-text {
-    margin-left: 4px;
-}
-
-#skills-section {
-    transition: opacity .5s;
-    cursor: pointer;
-}
-
-#skills-section:hover {
-    opacity: 0;
 }
