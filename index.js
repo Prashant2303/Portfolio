@@ -20,8 +20,8 @@
     }
 
     const handleMode = () => {
-        const icon = document.querySelector('#theme-icon');
-        icon.innerHTML = bodyEl.classList.contains(lightMode) ? 'light_mode' : 'dark_mode';
+        document.querySelector('#light-icon').classList.toggle('hidden');
+        document.querySelector('#dark-icon').classList.toggle('hidden');
         bodyEl.classList.toggle(lightMode);
         localStorage.setItem(lightMode, bodyEl.classList.contains(lightMode))
     }

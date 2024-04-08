@@ -4,13 +4,20 @@
     --space3: 12px;
     --dark-color: rgb(12, 12, 12);
     --light-color: white;
+    --500ms: 500ms;
+    --200ms: 200ms;
+    --1sec: 1000ms;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    transition: color, background-color 0.5s linear;
+    transition: color, background-color var(--500ms) linear;
     background-color: var(--dark-color);
     color: var(--light-color);
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .light-mode {
@@ -37,6 +44,12 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        .title {
+            background: linear-gradient(45deg, rgb(7, 0, 127), rgb(0, 204, 140) 80%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .nav-buttons {
             display: flex;
             gap: var(--space3);
@@ -50,6 +63,15 @@ header {
 
                 .material-symbols-rounded {
                     color: inherit;
+                    transition: opacity var(--500ms);
+                }
+
+                .dark {
+                    position: absolute;
+                }
+
+                .hidden {
+                    opacity: 0;
                 }
             }
 
@@ -58,7 +80,7 @@ header {
             }
 
             #menu-toggle {
-                transition: all 200ms linear;
+                transition: all var(--200ms) linear;
             }
 
             .toggle {
@@ -69,7 +91,7 @@ header {
 
     .menu {
         text-align: center;
-        transition: all 0.2s linear;
+        transition: all var(--200ms) linear;
         transform: scaleY(0);
         transform-origin: top;
         height: 0px;
