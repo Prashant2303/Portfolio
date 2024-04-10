@@ -109,31 +109,6 @@ header {
     }
 }
 
-#home-section {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#hero-text {
-    animation-name: fadeInUp;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translate(0px, 40px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translate(0px, 0px);
-        opacity: 1;
-    }
-}
-
 section {
     height: 100vh;
     animation: fade-in linear forwards;
@@ -147,6 +122,62 @@ section {
     to {
         scale: 1;
         opacity: 1;
+    }
+}
+
+#home-section {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dynamic-text {
+        font-size: 32px;
+        display: flex;
+        gap: var(--space2);
+        height: 50px;
+        overflow: hidden;
+
+        .words {
+            span {
+                display: block;
+                animation: spin-words 6s infinite;
+            }
+        }
+    }
+}
+
+@keyframes spin-words {
+    10% {
+        transform: translateY(-112%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-212%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-312%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    85% {
+        transform: translateY(-412%);
+    }
+
+    100% {
+        transform: translateY(-400%);
     }
 }
 
