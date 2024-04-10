@@ -111,11 +111,12 @@ header {
 
 #home-section {
     margin-top: 60px;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+#hero-text {
     animation-name: fadeInUp;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -131,4 +132,28 @@ header {
         transform: translate(0px, 0px);
         opacity: 1;
     }
+}
+
+section {
+    height: 100vh;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+@keyframes fade-in {
+    from {
+        scale: 0.8;
+        opacity: 0;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+footer {
+    height: 90vh;
+    background: linear-gradient(to top, #01040e, #01040e00), linear-gradient(90deg, #003452 12%, #0c1a41 34%, #32074b 80%);
 }
