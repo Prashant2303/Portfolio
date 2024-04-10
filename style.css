@@ -136,17 +136,14 @@ header {
 
 section {
     height: 100vh;
-    animation: fade-in linear;
-    animation-timeline: view();
+    animation: fade-in linear forwards;
+    animation-timeline: view(200px);
     animation-range: entry;
+    scale: 0.8;
+    opacity: 0;
 }
 
 @keyframes fade-in {
-    from {
-        scale: 0.8;
-        opacity: 0;
-    }
-
     to {
         scale: 1;
         opacity: 1;
