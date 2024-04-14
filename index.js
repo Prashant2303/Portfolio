@@ -21,4 +21,15 @@
         toggleEl.classList.toggle('toggle');
         menuEl.classList.toggle('visible');
     })
+
+    // Duplicate list elements
+    const scrollerInners = document.querySelectorAll('.scroller-inner');
+    scrollerInners.forEach(scrollerInner => {
+        const children = Array.from(scrollerInner.children);
+        children.forEach(child => {
+            const duplicateEl = child.cloneNode(true);
+            duplicateEl.setAttribute('aria-hidden', true);
+            scrollerInner.appendChild(duplicateEl);
+        })
+    })
 })()
