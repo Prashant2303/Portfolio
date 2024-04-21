@@ -112,7 +112,7 @@ header {
 section {
     min-height: 100vh;
     animation: fade-in linear forwards;
-    animation-timeline: view(500px 0px);
+    animation-timeline: view(300px 0px);
     animation-range: entry;
     scale: 0.8;
     opacity: 0;
@@ -131,6 +131,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
 
     .dynamic-text {
         font-size: 32px;
@@ -148,6 +150,24 @@ section {
                 color: transparent;
             }
         }
+    }
+
+    .test {
+        background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
+        color: transparent;
+        background-clip: text;
+        font-size: 4rem;
+    }
+
+    .test::before {
+        content: 'Hello';
+        position: absolute;
+        background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
+        color: transparent;
+        background-clip: text;
+        font-size: 4rem;
+        filter: blur(1.5rem);
+        scale: 1.3;
     }
 }
 
