@@ -134,12 +134,35 @@ section {
     flex-direction: column;
     gap: 1.5rem;
 
+    .salutation {
+        font-size: 2rem;
+
+        .test {
+            background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
+            color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+        }
+
+        .test::before {
+            content: attr(data-content);
+            position: absolute;
+            background-image: inherit;
+            color: inherit;
+            background-clip: inherit;
+            white-space: inherit;
+            filter: blur(1.5rem);
+            scale: 1.1;
+        }
+    }
+
     .dynamic-text {
         font-size: 32px;
         display: flex;
         gap: var(--space2);
         height: 50px;
         overflow: hidden;
+        margin-top: 3rem;
 
         .words {
             span {
@@ -150,24 +173,6 @@ section {
                 color: transparent;
             }
         }
-    }
-
-    .test {
-        background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
-        color: transparent;
-        background-clip: text;
-        font-size: 4rem;
-    }
-
-    .test::before {
-        content: 'Hello';
-        position: absolute;
-        background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
-        color: transparent;
-        background-clip: text;
-        font-size: 4rem;
-        filter: blur(1.5rem);
-        scale: 1.3;
     }
 }
 
