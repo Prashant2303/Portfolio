@@ -23,6 +23,18 @@ button {
 .light-mode {
     background-color: var(--light-color);
     color: var(--dark-color);
+
+    #experience-section {
+        .experience-content {
+            .firm {
+                .projects {
+                    .project {
+                        background: gainsboro;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -117,7 +129,7 @@ section {
     scale: 0.8;
     opacity: 0;
     padding: 1em;
-    transform: translate(60px, 60px);
+    /* transform: translate(60px, 60px); */
 }
 
 @keyframes fade-in {
@@ -219,10 +231,37 @@ section {
         justify-content: center;
         flex-wrap: wrap;
 
+        .firm {
+            width: 100%;
+
+            .firm-details {
+                display: flex;
+                justify-content: space-between;
+                /* background: #2c2b2b; */
+                padding: .5rem;
+                border-radius: 5px;
+            }
+
+            .projects {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                .project {
+                    transition: background var(--500ms) linear;
+                    background: #151515;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    flex-grow: 1;
+                }
+            }
+        }
+
         .company {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            margin-top: 1rem;
         }
 
         .experience {
