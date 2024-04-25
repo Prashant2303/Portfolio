@@ -1,6 +1,6 @@
 (function () {
     // Theme Toggle
-    const bodyEl = document.querySelector('body');
+    const bodyEl = document.querySelector('html');
     const lightMode = 'light-mode';
     if (localStorage.getItem(lightMode) === 'true') {
         bodyEl.classList.add(lightMode);

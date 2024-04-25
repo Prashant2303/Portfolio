@@ -9,11 +9,12 @@
     --1sec: 1000ms;
 }
 
-body {
+html {
     font-family: 'Roboto', sans-serif;
-    transition: color, background-color var(--500ms) linear;
+    scrollbar-color: #2b2b2b var(--dark-color);
     background-color: var(--dark-color);
     color: var(--light-color);
+    transition: all var(--500ms) linear;
 }
 
 button {
@@ -23,13 +24,16 @@ button {
 .light-mode {
     background-color: var(--light-color);
     color: var(--dark-color);
+    scrollbar-color: initial;
 
-    #experience-section {
-        .experience-content {
-            .firm {
-                .projects {
-                    .project {
-                        background: gainsboro;
+    body {
+        #experience-section {
+            .experience-content {
+                .firm {
+                    .projects {
+                        .project {
+                            background: gainsboro;
+                        }
                     }
                 }
             }
@@ -39,7 +43,7 @@ button {
 
 @media screen and (min-width: 600px) {
     body {
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
     }
 }
 
@@ -129,7 +133,6 @@ section {
     scale: 0.8;
     opacity: 0;
     padding: 1em;
-    /* transform: translate(60px, 60px); */
 }
 
 @keyframes fade-in {
@@ -149,7 +152,7 @@ section {
     gap: 1.5rem;
 
     .salutation {
-        font-size: 2rem;
+        font-size: clamp(2rem, 8vw, 3rem);
 
         .test {
             background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
@@ -177,6 +180,7 @@ section {
         height: 50px;
         overflow: hidden;
         margin-top: 3rem;
+        text-align: center;
 
         .words {
             span {
