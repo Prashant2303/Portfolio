@@ -28,7 +28,7 @@ button {
 
     body {
         #experience-section {
-            .experience-content {
+            .firms {
                 .firm {
                     .projects {
                         .project {
@@ -43,7 +43,7 @@ button {
 
 @media screen and (min-width: 600px) {
     body {
-        /* border: 2px solid blue; */
+        border: 2px solid blue;
     }
 }
 
@@ -126,7 +126,6 @@ header {
 }
 
 section {
-    min-height: 100vh;
     animation: fade-in linear forwards;
     animation-timeline: view(300px 0px);
     animation-range: entry;
@@ -144,6 +143,7 @@ section {
 }
 
 #home-section {
+    height: 100vh;
     margin-top: 60px;
     display: flex;
     justify-content: center;
@@ -230,7 +230,7 @@ section {
 
 #experience-section,
 #projects-section {
-    .experience-content {
+    .firms {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -260,26 +260,30 @@ section {
                 }
             }
         }
-
-        .company {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1rem;
-        }
-
-        .experience {
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin: 1rem;
-            /* background: #1c1c1c; */
-            box-shadow: 0px 0.5px 1rem 0px;
-            flex-grow: 1;
-        }
     }
 
     ul {
         margin-left: 1rem;
+    }
+}
+
+#projects-section {
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .project {
+            transition: background var(--500ms) linear;
+            background: #151515;
+            padding: 1rem;
+            border-radius: 10px;
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+            }
+        }
     }
 }
 
