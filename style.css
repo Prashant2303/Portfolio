@@ -333,4 +333,21 @@ section {
 footer {
     height: 90vh;
     background: linear-gradient(to top, #01040e, #01040e00), linear-gradient(90deg, #003452 12%, #0c1a41 34%, #32074b 80%);
+
+    .material-symbols-rounded {
+        font-size: 2rem;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    svg {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    div {
+        display: flex;
+    }
 }
