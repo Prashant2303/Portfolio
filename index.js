@@ -1,14 +1,19 @@
 (function () {
     // Theme Toggle
     const bodyEl = document.querySelector('html');
+    const sunIcon = document.querySelector('#light-icon');
+    const moonIcon = document.querySelector('#dark-icon');
     const lightMode = 'light-mode';
+
     if (localStorage.getItem(lightMode) === 'true') {
         bodyEl.classList.add(lightMode);
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
     }
 
     const handleMode = () => {
-        document.querySelector('#light-icon').classList.toggle('hidden');
-        document.querySelector('#dark-icon').classList.toggle('hidden');
+        sunIcon.classList.toggle('hidden');
+        moonIcon.classList.toggle('hidden');
         bodyEl.classList.toggle(lightMode);
         localStorage.setItem(lightMode, bodyEl.classList.contains(lightMode))
     }
