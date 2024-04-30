@@ -53,9 +53,25 @@ a {
     }
 }
 
-@media screen and (min-width: 600px) {
-    body {
-        border: 0px solid blue;
+@media screen and (min-width: 800px) {
+    header {
+        padding: var(--space3) 5rem !important;
+
+        .navbar {
+            nav {
+                display: flex !important;
+            }
+
+            .nav-buttons {
+                #menu-toggle {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    section {
+        padding: 1rem 5rem !important;
     }
 }
 
@@ -78,9 +94,20 @@ header {
             -webkit-text-fill-color: transparent;
         }
 
+        .gap {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        nav {
+            display: none;
+            gap: 1rem;
+            margin-right: 1rem;
+        }
+
         .nav-buttons {
             display: flex;
-            gap: var(--space3);
+            gap: 1rem;
 
             button {
                 border: 0px;
@@ -210,6 +237,7 @@ section {
 
         .material-symbols-rounded {
             font-size: 2rem;
+            margin-top: 2px;
         }
 
         i {
