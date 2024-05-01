@@ -23,6 +23,7 @@ button {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 .light-mode {
@@ -153,7 +154,6 @@ header {
 
         a {
             padding: var(--space3);
-            text-decoration: none;
         }
     }
 
