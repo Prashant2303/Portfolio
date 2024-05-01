@@ -108,7 +108,7 @@ header {
 
         .nav-buttons {
             display: flex;
-            gap: 1rem;
+            gap: var(--space3);
 
             button {
                 border: 0px;
@@ -321,6 +321,11 @@ section {
 }
 
 #skills-section {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     .content {
         display: flex;
         justify-content: center;
@@ -364,7 +369,7 @@ section {
 }
 
 footer {
-    padding: 1rem;
+    padding: 2rem;
     /* background: linear-gradient(to top, #01040e, #01040e00), linear-gradient(90deg, #003452 12%, #0c1a41 34%, #32074b 80%); */
     display: flex;
     justify-content: center;
