@@ -210,22 +210,20 @@ section {
     }
 
     .dynamic-text {
-        font-size: 32px;
-        display: flex;
-        gap: var(--space2);
-        height: 50px;
+        height: 2.5rem;
         overflow: hidden;
         margin-top: 3rem;
-        text-align: center;
+    }
 
-        .words {
-            span {
-                display: block;
-                animation: spin-words 6s infinite;
-                background: linear-gradient(45deg, red, blue);
-                background-clip: text;
-                color: transparent;
-            }
+    .words {
+        text-align: center;
+        animation: spin infinite 6s;
+
+        div {
+            font-size: 2rem;
+            background: linear-gradient(45deg, red, blue);
+            background-clip: text;
+            color: transparent;
         }
     }
 
@@ -246,37 +244,21 @@ section {
     }
 }
 
-@keyframes spin-words {
-    /* 10% {
-        transform: translateY(-112%);
-    } */
-
+@keyframes spin {
     25% {
-        transform: translateY(-100%);
+        transform: translateY(-20%);
     }
-
-    /* 35% {
-        transform: translateY(-212%);
-    } */
 
     50% {
-        transform: translateY(-200%);
+        transform: translateY(-40%);
     }
-
-    /* 60% {
-        transform: translateY(-312%);
-    } */
 
     75% {
-        transform: translateY(-300%);
+        transform: translateY(-60%);
     }
 
-    /* 85% {
-        transform: translateY(-412%);
-    } */
-
     100% {
-        transform: translateY(-400%);
+        transform: translateY(-80%);
     }
 }
 
