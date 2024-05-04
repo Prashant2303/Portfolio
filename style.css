@@ -74,7 +74,7 @@ header {
         align-items: center;
 
         .title {
-            background: linear-gradient(45deg, rgb(7, 0, 127), rgb(0, 204, 140) 80%);
+            background: linear-gradient(45deg, rgb(0 134 255), rgb(0, 204, 140) 80%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -280,13 +280,13 @@ section {
     }
 }
 
-.projects-section {
-    h2 {
-        margin-bottom: 0.7rem;
-    }
-}
-
 .experience-section {
+    h2 {
+        background: linear-gradient(90deg, #ff52d9, #7480ff 9%);
+        color: transparent;
+        background-clip: text;
+    }
+
     .firms {
         display: flex;
         justify-content: center;
@@ -310,6 +310,15 @@ section {
     }
 }
 
+.projects-section {
+    h2 {
+        margin-bottom: 0.7rem;
+        background: linear-gradient(40deg, blue, red 13%);
+        color: transparent;
+        background-clip: text;
+    }
+}
+
 .skills-section {
     min-height: 50vh;
     display: flex;
@@ -330,11 +339,10 @@ section {
             width: max-content;
 
             li {
-                border: 1px solid mediumaquamarine;
                 padding: 1rem;
                 border-radius: 0.5rem;
-                box-shadow: 0px 0.5rem 1rem -0.25rem mediumaquamarine;
                 white-space: nowrap;
+                animation: color-change 10s linear infinite;
             }
         }
 
@@ -345,6 +353,43 @@ section {
         .animate-right {
             animation: scroll 40s linear infinite reverse;
         }
+    }
+}
+
+@keyframes color-change {
+    0% {
+        border: 1px solid violet;
+        box-shadow: 0px 0.5rem 1rem -0.25rem violet;
+    }
+
+    16% {
+        border: 1px solid rgb(0, 85, 255);
+        box-shadow: 0px 0.5rem 1rem -0.25rem rgb(0, 85, 255);
+    }
+
+    32% {
+        border: 1px solid green;
+        box-shadow: 0px 0.5rem 1rem -0.25rem green;
+    }
+
+    48% {
+        border: 1px solid lightgreen;
+        box-shadow: 0px 0.5rem 1rem -0.25rem lightgreen;
+    }
+
+    64% {
+        border: 1px solid orange;
+        box-shadow: 0px 0.5rem 1rem -0.25rem orange;
+    }
+
+    80% {
+        border: 1px solid red;
+        box-shadow: 0px 0.5rem 1rem -0.25rem red;
+    }
+
+    100% {
+        border: 1px solid violet;
+        box-shadow: 0px 0.5rem 1rem -0.25rem violet;
     }
 }
 
