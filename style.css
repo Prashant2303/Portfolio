@@ -32,24 +32,8 @@ a {
     scrollbar-color: initial;
 
     body {
-        #experience-section {
-            .firms {
-                .firm {
-                    .projects {
-                        .project {
-                            background: gainsboro;
-                        }
-                    }
-                }
-            }
-        }
-
-        #projects-section {
-            .projects {
-                .project {
-                    background: gainsboro;
-                }
-            }
+        .project {
+            background: gainsboro;
         }
     }
 }
