@@ -37,4 +37,19 @@
             scrollerInner.appendChild(duplicateEl);
         })
     })
+
+    // Fade In
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            } else {
+                entry.target.classList.remove('fade-in');
+            }
+        })
+    });
+
+    document.querySelectorAll('.fade-out').forEach(section => {
+        observer.observe(section);
+    })
 })()

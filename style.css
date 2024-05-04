@@ -148,12 +148,25 @@ header {
 }
 
 section {
-    animation: fade-in linear forwards;
+    /* animation: fade-in linear forwards;
     animation-timeline: view(300px 0px);
     animation-range: entry;
     scale: 0.8;
-    opacity: 0;
+    opacity: 0; */
     padding: 1em;
+}
+
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20vh);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 1s linear;
+}
+
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
 }
 
 @keyframes fade-in {
@@ -165,7 +178,7 @@ section {
 }
 
 .home-section {
-    height: 100vh;
+    height: 101vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,14 +188,14 @@ section {
     .salutation {
         font-size: clamp(2rem, 8vw, 3rem);
 
-        .test {
+        .glow {
             background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
             color: transparent;
             background-clip: text;
             white-space: nowrap;
         }
 
-        .test::before {
+        .glow::before {
             content: attr(data-content);
             position: absolute;
             background-image: inherit;
@@ -213,7 +226,7 @@ section {
 
     .socials {
         position: absolute;
-        bottom: 1rem;
+        bottom: 2rem;
         display: flex;
         gap: 1rem;
 
@@ -257,16 +270,19 @@ section {
         padding: 1rem;
         border-radius: 10px;
 
+        ul {
+            margin-left: 1rem;
+        }
+
         a {
             text-decoration: underline;
         }
     }
 }
 
-.experience-section,
 .projects-section {
-    ul {
-        margin-left: 1rem;
+    h2 {
+        margin-bottom: 0.7rem;
     }
 }
 
@@ -299,39 +315,35 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
-    .content {
-        display: flex;
-        justify-content: center;
+    .scroller {
+        width: 800px;
+        overflow: hidden;
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 
-        .scroller {
-            width: 800px;
-            overflow: hidden;
-            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        .scroller-inner {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            padding-block: 1rem;
+            width: max-content;
 
-            .scroller-inner {
-                list-style: none;
-                display: flex;
-                gap: 1rem;
-                padding-block: 1rem;
-                width: max-content;
-
-                li {
-                    border: 1px solid mediumaquamarine;
-                    padding: 1rem;
-                    border-radius: 0.5rem;
-                    box-shadow: 0px 0.5rem 1rem -0.25rem mediumaquamarine;
-                    white-space: nowrap;
-                }
+            li {
+                border: 1px solid mediumaquamarine;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: 0px 0.5rem 1rem -0.25rem mediumaquamarine;
+                white-space: nowrap;
             }
+        }
 
-            .animate-left {
-                animation: scroll 40s linear infinite;
-            }
+        .animate-left {
+            animation: scroll 40s linear infinite;
+        }
 
-            .animate-right {
-                animation: scroll 40s linear infinite reverse;
-            }
+        .animate-right {
+            animation: scroll 40s linear infinite reverse;
         }
     }
 }
