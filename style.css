@@ -180,7 +180,7 @@ section {
     }
 }
 
-#home-section {
+.home-section {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -262,8 +262,31 @@ section {
     }
 }
 
-#experience-section,
-#projects-section {
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .project {
+        transition: background var(--500ms) linear;
+        background: #151515;
+        padding: 1rem;
+        border-radius: 10px;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.experience-section,
+.projects-section {
+    ul {
+        margin-left: 1rem;
+    }
+}
+
+.experience-section {
     .firms {
         display: flex;
         justify-content: center;
@@ -280,47 +303,14 @@ section {
                 border-radius: 5px;
             }
 
-            .projects {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 1rem;
-
-                .project {
-                    transition: background var(--500ms) linear;
-                    background: #151515;
-                    padding: 1rem;
-                    border-radius: 10px;
-                    flex-grow: 1;
-                }
-            }
-        }
-    }
-
-    ul {
-        margin-left: 1rem;
-    }
-}
-
-#projects-section {
-    .projects {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        .project {
-            transition: background var(--500ms) linear;
-            background: #151515;
-            padding: 1rem;
-            border-radius: 10px;
-
-            a {
-                text-decoration: underline;
+            .project {
+                flex-grow: 1;
             }
         }
     }
 }
 
-#skills-section {
+.skills-section {
     min-height: 50vh;
     display: flex;
     flex-direction: column;
