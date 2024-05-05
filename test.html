@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer {
+            border: 1px solid;
+            height: 1rem;
+            overflow: hidden;
+        }
+
+        .inner {
+            animation: slide-up infinite 10s;
+        }
+
+        @keyframes slide-up {
+            25% {
+                transform: translateY(-20%);
+            }
+
+            50% {
+                transform: translateY(-40%);
+            }
+
+            75% {
+                transform: translateY(-60%);
+            }
+
+            100% {
+                transform: translateY(-80%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>A</div>
+        </div>
+    </div>
+</body>
+
+</html>

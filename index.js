@@ -22,10 +22,12 @@
     // Menu Toggle
     const toggleEl = document.querySelector('#menu-toggle');
     const menuEl = document.querySelector('.menu');
-    toggleEl.addEventListener('click', () => {
+    function toggle() {
         toggleEl.classList.toggle('toggle');
         menuEl.classList.toggle('visible');
-    })
+    }
+    toggleEl.addEventListener('click', toggle);
+    menuEl.addEventListener('click', toggle);
 
     // Duplicate list elements
     const scrollerInners = document.querySelectorAll('.scroller-inner');
