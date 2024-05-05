@@ -286,45 +286,51 @@ section {
 }
 
 .experience-section {
-    margin-top: 1rem;
+    .content {
+        margin-top: 3rem;
 
-    h2 {
-        background: linear-gradient(90deg, #ff52d9, #7480ff);
-        color: transparent;
-        background-clip: text;
-        width: fit-content;
-    }
+        h2 {
+            background: linear-gradient(90deg, #ff52d9, #7480ff);
+            color: transparent;
+            background-clip: text;
+            width: fit-content;
+        }
 
-    .firms {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        .firms {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
 
-        .firm {
-            width: 100%;
+            .firm {
+                width: 100%;
 
-            .firm-details {
-                display: flex;
-                justify-content: space-between;
-                /* background: #2c2b2b; */
-                padding: .5rem;
-                border-radius: 5px;
-            }
+                .firm-details {
+                    display: flex;
+                    justify-content: space-between;
+                    /* background: #2c2b2b; */
+                    padding: .5rem;
+                    border-radius: 5px;
+                }
 
-            .project {
-                flex-grow: 1;
+                .project {
+                    flex-grow: 1;
+                }
             }
         }
     }
 }
 
 .projects-section {
-    h2 {
-        margin-bottom: 0.7rem;
-        background: linear-gradient(40deg, blue, red);
-        color: transparent;
-        background-clip: text;
-        width: fit-content;
+    .content {
+        margin-top: 3rem;
+
+        h2 {
+            margin-bottom: 0.7rem;
+            background: linear-gradient(40deg, blue, red);
+            color: transparent;
+            background-clip: text;
+            width: fit-content;
+        }
     }
 }
 
