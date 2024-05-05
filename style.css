@@ -7,6 +7,11 @@
     --500ms: 500ms;
     --200ms: 200ms;
     --1sec: 1000ms;
+    --border-width: 1px;
+    --offset-x: 0px;
+    --offset-y: 0.5rem;
+    --blur-radius: 1rem;
+    --spread-radius: -0.25rem;
 }
 
 html {
@@ -178,7 +183,7 @@ section {
 }
 
 .home-section {
-    height: 101vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,7 +214,7 @@ section {
     .dynamic-text {
         height: 2.5rem;
         overflow: hidden;
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 
     .words {
@@ -226,7 +231,7 @@ section {
 
     .socials {
         position: absolute;
-        bottom: 2rem;
+        bottom: 1rem;
         display: flex;
         gap: 1rem;
 
@@ -281,6 +286,8 @@ section {
 }
 
 .experience-section {
+    margin-top: 1rem;
+
     h2 {
         background: linear-gradient(90deg, #ff52d9, #7480ff);
         color: transparent;
@@ -360,38 +367,38 @@ section {
 
 @keyframes color-change {
     0% {
-        border: 1px solid violet;
-        box-shadow: 0px 0.5rem 1rem -0.25rem violet;
+        border: var(--border-width) solid violet;
+        box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius) var(--spread-radius) violet;
     }
 
     16% {
-        border: 1px solid rgb(0, 85, 255);
-        box-shadow: 0px 0.5rem 1rem -0.25rem rgb(0, 85, 255);
+        border: var(--border-width) solid rgb(0, 85, 255);
+        box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius) var(--spread-radius) rgb(0, 85, 255);
     }
 
     32% {
-        border: 1px solid green;
-        box-shadow: 0px 0.5rem 1rem -0.25rem green;
+        border: var(--border-width) solid green;
+        box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius) var(--spread-radius) green;
     }
 
     48% {
-        border: 1px solid lightgreen;
-        box-shadow: 0px 0.5rem 1rem -0.25rem lightgreen;
+        border: var(--border-width) solid lightgreen;
+        box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius) var(--spread-radius) lightgreen;
     }
 
     64% {
-        border: 1px solid orange;
-        box-shadow: 0px 0.5rem 1rem -0.25rem orange;
+        border: var(--border-width) solid orange;
+        box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius) var(--spread-radius) orange;
     }
 
     80% {
-        border: 1px solid red;
-        box-shadow: 0px 0.5rem 1rem -0.25rem red;
+        border: var(--border-width) solid red;
+        box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius) var(--spread-radius) red;
     }
 
     100% {
-        border: 1px solid violet;
-        box-shadow: 0px 0.5rem 1rem -0.25rem violet;
+        border: var(--border-width) solid violet;
+        box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius) var(--spread-radius) violet;
     }
 }
 
