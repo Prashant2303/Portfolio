@@ -81,7 +81,8 @@ header {
         .title {
             background: linear-gradient(45deg, rgb(0 134 255), rgb(0, 204, 140) 80%);
             background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: transparent;
+            font-size: 1.5rem;
         }
 
         .gap {
@@ -153,11 +154,6 @@ header {
 }
 
 section {
-    /* animation: fade-in linear forwards;
-    animation-timeline: view(300px 0px);
-    animation-range: entry;
-    scale: 0.8;
-    opacity: 0; */
     padding: 1em;
 }
 
@@ -270,9 +266,13 @@ section {
     gap: 1rem;
 
     .project {
+        .heading {
+            font-weight: bold;
+        }
+
         transition: background var(--500ms) linear;
         background: #151515;
-        padding: 1rem;
+        padding: 11px 1rem;
         border-radius: 10px;
 
         ul {
@@ -307,7 +307,6 @@ section {
                 .firm-details {
                     display: flex;
                     justify-content: space-between;
-                    /* background: #2c2b2b; */
                     padding: .5rem;
                     border-radius: 5px;
                 }
@@ -350,7 +349,7 @@ section {
             list-style: none;
             display: flex;
             gap: 1rem;
-            padding-block: 1rem;
+            padding-block: 1.5rem;
             width: max-content;
 
             li {
@@ -414,15 +413,13 @@ section {
     }
 }
 
+iframe {
+    display: none;
+}
+
 footer {
     padding: 2rem;
-    /* background: linear-gradient(to top, #01040e, #01040e00), linear-gradient(90deg, #003452 12%, #0c1a41 34%, #32074b 80%); */
     display: flex;
     justify-content: center;
     align-items: center;
-
-    svg {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
 }
