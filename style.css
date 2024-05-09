@@ -40,6 +40,10 @@ a {
         .project {
             background: gainsboro;
         }
+
+        footer .copyright {
+            background-color: var(--dark-color);
+        }
     }
 }
 
@@ -413,13 +417,40 @@ section {
     }
 }
 
-iframe {
-    display: none;
-}
-
 footer {
-    padding: 2rem;
+    padding: 2rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    .copyright {
+        height: 1.5rem;
+        width: 1.5rem;
+        transition: background-color var(--500ms) linear;
+        background-color: var(--light-color);
+        mask-image: url(/svgs/copyright.svg);
+    }
+
+    .html {
+        background-image: url(/svgs/html.svg);
+    }
+
+    .css {
+        background-image: url(/svgs/css.svg);
+    }
+
+    .js {
+        background-image: url(/svgs/js.svg);
+    }
 }
