@@ -439,18 +439,18 @@ footer {
         width: 1.5rem;
         transition: background-color var(--500ms) linear;
         background-color: var(--light-color);
-        mask-image: url(/svgs/copyright.svg);
+        mask-image: url(svgs/copyright.svg);
     }
 
     .html {
-        background-image: url(/svgs/html.svg);
+        background-image: url(svgs/html.svg);
     }
 
     .css {
-        background-image: url(/svgs/css.svg);
+        background-image: url(svgs/css.svg);
     }
 
     .js {
-        background-image: url(/svgs/js.svg);
+        background-image: url(svgs/js.svg);
     }
 }
