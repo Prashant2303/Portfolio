@@ -55,3 +55,45 @@
         observer.observe(section);
     })
 })()
+
+function populateProjectsList() {
+    const projects = [
+        {
+            title: "MQL Extension",
+            link: "https://chromewebstore.google.com/detail/mql-extensions/khgcpljhlkiljndnfbijcjdkolhgocic?pli=1",
+            tech: "ReactJS, Vite and Chrome Browser",
+            points: [
+                "Developed a Chrome extension to streamline interactions with MyQuestionList, enhancing user productivity.",
+                "Implemented using ReactJS with Context API to effectively manage state.",
+                "Integrated a Service Worker to sync login states with the main application, improving user session reliability.",
+                "Published the extension on the Chrome Web Store, making it accessible for potential users globally."
+            ]
+        }
+    ]
+
+    const projectsEl = document.querySelector('.projects-section .projects');
+    for (const project of projects) {
+        const projectEl = document.createElement('div');
+        projectEl.classList.add('project');
+
+        const headingEl = document.createElement('span');
+        headingEl.classList.add('heading');
+        headingEl.innerText = project.title;
+        projectEl.appendChild(headingEl);
+
+        const infoEl = document.createElement('span');
+        infoEl.innerHTML = ` | <i>${project.tech}</i> | <a href="${project.link}" target="_blank">Live Link 🔗</a>`;
+        projectEl.appendChild(infoEl);
+
+        const ulEl = document.createElement('ul');
+        for (const point of project.points) {
+            const liEl = document.createElement('li');
+            liEl.innerText = point;
+            ulEl.appendChild(liEl);
+        }
+        projectEl.appendChild(ulEl);
+
+        projectsEl.appendChild(projectEl);
+    }
+}
+populateProjectsList();
