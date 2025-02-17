@@ -97,3 +97,28 @@ function populateProjectsList() {
     }
 }
 populateProjectsList();
+
+function handleScroll() {
+    const scrollbox = document.querySelector('.scrollbox');
+    scrollbox.scrollTop = 0;
+    const titleEl = document.querySelector('.scrollbox .title');
+
+    scrollbox.addEventListener('scroll', () => {
+        const position = scrollbox.scrollTop;
+        console.log(position);
+        if (position > 50) {
+            titleEl.style.left = '0%';
+        } else {
+            titleEl.style.left = '35%';
+
+        }
+    })
+}
+handleScroll();
+
+document.querySelector('.toggle').addEventListener('click', () => {
+    console.log('Chnee')
+    let titleEl = document.querySelector('.snap-con .title');
+    console.log(titleEl.style);
+    titleEl.style.color = 'red'
+})
