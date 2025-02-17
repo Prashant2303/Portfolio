@@ -96,4 +96,4 @@ function populateProjectsList() {
         projectsEl.appendChild(projectEl);
     }
 }
-populateProjectsList();
+// populateProjectsList();
