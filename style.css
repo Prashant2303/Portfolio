@@ -20,6 +20,7 @@ html {
     background-color: var(--dark-color);
     color: var(--light-color);
     transition: all var(--500ms) linear;
+    scroll-behavior: smooth;
 }
 
 button {
@@ -452,5 +453,83 @@ footer {
 
     .js {
         background-image: url(svgs/js.svg);
+    }
+}
+
+.intro {
+    height: 100vh;
+
+    .absolute {
+        left: 0;
+        right: 0;
+        position: absolute;
+        margin-top: 40vh;
+        margin-inline: auto;
+        max-width: 50%;
+        text-align: center;
+        transition: all 0.5s ease;
+
+        .salutation {
+            font-size: clamp(2rem, 8vw, 3rem);
+
+            .glow {
+                background-image: linear-gradient(90deg, #ff5861 0%, #ff52d9 9%, #7480ff 47%, #00cdb8 100%);
+                color: transparent;
+                background-clip: text;
+                white-space: nowrap;
+            }
+
+            .glow::before {
+                content: attr(data-content);
+                position: absolute;
+                background-image: inherit;
+                color: inherit;
+                background-clip: inherit;
+                white-space: inherit;
+                filter: blur(1.5rem);
+            }
+        }
+
+        .dynamic-text {
+            height: 2.5rem;
+            overflow: hidden;
+            margin-top: 4rem;
+        }
+
+        .words {
+            text-align: center;
+            animation: spin infinite 6s;
+
+            div {
+                font-size: 2rem;
+                background: linear-gradient(45deg, red, blue);
+                background-clip: text;
+                color: transparent;
+            }
+        }
+    }
+
+    .snap-con {
+        height: inherit;
+        overflow: scroll;
+        scrollbar-width: none;
+        scroll-snap-type: y mandatory;
+
+        .content {
+            height: inherit;
+            scroll-snap-align: start;
+        }
+
+
+        .blank {
+            background-color: #2b2b2b;
+        }
+
+        .bio {
+            background-color: #454545;
+            width: 50%;
+            margin-left: 50%;
+            height: inherit;
+        }
     }
 }

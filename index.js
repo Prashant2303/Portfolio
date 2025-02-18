@@ -97,3 +97,23 @@ function populateProjectsList() {
     }
 }
 // populateProjectsList();
+
+document.querySelector('.toggle').addEventListener('click', () => {
+    console.log('Chnee')
+    let titleEl = document.querySelector('.snap-con .title');
+    console.log(titleEl.style);
+    titleEl.style.color = 'red'
+})
+
+const snapEl = document.querySelector('.snap-con');
+const absEl = document.querySelector('.absolute');
+snapEl.addEventListener('scroll', () => {
+    console.log(snapEl.scrollTop);
+    if (snapEl.scrollTop > 250) {
+        console.log('Move', absEl.style.right);
+        absEl.style.right = '50%';
+    } else {
+        console.log('Reset', absEl.style.right);
+        absEl.style.right = '0';
+    }
+})
