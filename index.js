@@ -107,13 +107,13 @@ document.querySelector('.toggle').addEventListener('click', () => {
 
 const snapEl = document.querySelector('.snap-con');
 const absEl = document.querySelector('.absolute');
+const bioEl = document.querySelector('.bio');
 snapEl.addEventListener('scroll', () => {
-    console.log(snapEl.scrollTop);
     if (snapEl.scrollTop > 250) {
-        console.log('Move', absEl.style.right);
         absEl.style.right = '50%';
+        bioEl.style.opacity = 1;
     } else {
-        console.log('Reset', absEl.style.right);
         absEl.style.right = '0';
+        bioEl.style.opacity = 0;
     }
 })

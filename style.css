@@ -520,16 +520,45 @@ footer {
             scroll-snap-align: start;
         }
 
-
-        .blank {
-            background-color: #2b2b2b;
-        }
-
         .bio {
-            background-color: #454545;
             width: 50%;
             margin-left: 50%;
             height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s linear;
+
+            .text {
+                margin: 10%;
+                border-radius: 20px;
+                padding: 5%;
+                border: 2px solid fuchsia;
+
+                h2 {
+                    margin-bottom: 0.7rem;
+                    background: linear-gradient(40deg, #00ffe7, #ff00e3);
+                    color: transparent;
+                    background-clip: text;
+                    width: fit-content;
+                }
+
+                .socials {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: center;
+                    margin-top: 1rem;
+
+                    .material-symbols-rounded {
+                        font-size: 2rem;
+                        margin-top: 1.5px;
+                    }
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
         }
     }
 }
