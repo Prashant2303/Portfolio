@@ -98,22 +98,18 @@ function populateProjectsList() {
 }
 // populateProjectsList();
 
-document.querySelector('.toggle').addEventListener('click', () => {
-    console.log('Chnee')
-    let titleEl = document.querySelector('.snap-con .title');
-    console.log(titleEl.style);
-    titleEl.style.color = 'red'
-})
-
 const snapEl = document.querySelector('.snap-con');
 const absEl = document.querySelector('.absolute');
 const bioEl = document.querySelector('.bio');
+const aboutEl = document.querySelector('.about-section');
 snapEl.addEventListener('scroll', () => {
     if (snapEl.scrollTop > 250) {
         absEl.style.right = '50%';
         bioEl.style.opacity = 1;
+        aboutEl.style.display = 'none';
     } else {
         absEl.style.right = '0';
         bioEl.style.opacity = 0;
+        aboutEl.style.display = 'block';
     }
 })

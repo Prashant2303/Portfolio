@@ -70,6 +70,16 @@ a {
     }
 }
 
+@media screen and (max-width:1200px) {
+    .intro {
+        display: none;
+    }
+
+    .home-section {
+        display: flex !important;
+    }
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -185,7 +195,7 @@ section {
 
 .home-section {
     height: 100vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -262,6 +272,16 @@ section {
 
     100% {
         transform: translateY(-80%);
+    }
+}
+
+.about-section {
+    h2 {
+        margin-bottom: 0.7rem;
+        background: linear-gradient(40deg, #00ffe7, #ff00e3);
+        width: fit-content;
+        background-clip: text;
+        color: transparent;
     }
 }
 
