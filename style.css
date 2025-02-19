@@ -78,6 +78,15 @@ a {
     .home-section {
         display: flex !important;
     }
+
+    .personal {
+        display: block !important;
+
+        img {
+            max-width: 100% !important;
+            margin: 10px 0 5px 0 !important;
+        }
+    }
 }
 
 header {
@@ -307,6 +316,17 @@ section {
         a {
             text-decoration: underline;
         }
+
+    }
+}
+
+.personal {
+    display: flex;
+
+    img {
+        max-width: 50%;
+        border-radius: 5px;
+        margin: 5px 0 5px 10px;
     }
 }
 
@@ -563,22 +583,23 @@ footer {
                     width: fit-content;
                 }
 
-                .socials {
-                    display: flex;
-                    gap: 1rem;
-                    justify-content: center;
-                    margin-top: 1rem;
-
-                    .material-symbols-rounded {
-                        font-size: 2rem;
-                        margin-top: 1.5px;
-                    }
-
-                    i {
-                        font-size: 1.5rem;
-                    }
-                }
             }
         }
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .material-symbols-rounded {
+        font-size: 2rem;
+        margin-top: 1.5px;
+    }
+
+    i {
+        font-size: 1.5rem;
     }
 }
